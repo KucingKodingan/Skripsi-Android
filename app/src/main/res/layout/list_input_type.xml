@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="7dp"
+        android:backgroundTint="@color/semi_white">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="MASUK"
+            app:counterEnabled="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="3dp"
+            app:hintTextColor="@color/defaultColor"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
