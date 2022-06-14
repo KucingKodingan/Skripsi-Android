@@ -9,11 +9,14 @@ public class InputTypeModel {
     private String keterangan;
     @SerializedName("jumlah_kalimat")
     private int jumlah_kalimat;
+    @SerializedName("nomor")
+    private int nomor;
 
-    public InputTypeModel(String username, String keterangan, int jumlah_kalimat) {
+    public InputTypeModel(String username, String keterangan, int jumlah_kalimat, int nomor) {
         this.username = username;
         this.keterangan = keterangan;
         this.jumlah_kalimat = jumlah_kalimat;
+        this.nomor = nomor;
     }
 
     public String getUsername() {
@@ -38,5 +41,13 @@ public class InputTypeModel {
 
     public void setJumlah_kalimat(int jumlah_kalimat) {
         this.jumlah_kalimat = jumlah_kalimat;
+    }
+
+    public int getNomor() {
+        return nomor;
+    }
+
+    public void setNomor(int nomor) {
+        this.nomor = nomor;
     }
 }

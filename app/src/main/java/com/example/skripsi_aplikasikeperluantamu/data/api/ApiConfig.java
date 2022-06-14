@@ -5,9 +5,12 @@ import com.example.skripsi_aplikasikeperluantamu.data.model.InputTypeModel;
 import com.example.skripsi_aplikasikeperluantamu.data.model.UserModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -19,10 +22,10 @@ public interface ApiConfig {
     @GET("input_type.php")
     Call<ArrayList<InputTypeModel>> getDataTypeInstansi(@Query("username") String username);
 
-    @POST("input_type.php")
-    Call<GuestModel> postDataGuest(@Body ArrayList<GuestModel> guestModels);
+    @FormUrlEncoded
+    @POST("guest_data.php")
+    Call<GuestModel> postDataGuest(@Field("username") String username,
+                                         @Field("keterangan") String keterangan);
 
-    @GET("input_type.php")
-    Call<ArrayList<InputTypeModel>> getCoba(@Query("username") String username);
 }
 

@@ -9,6 +9,8 @@ public class UserModel {
     private String nama;
     @SerializedName("icon")
     private String icon;
+    @SerializedName("jumlahInputan")
+    private String jumlahInputan;
 
     public UserModel(String username, String nama, String icon){
         this.username = username;
@@ -38,5 +40,13 @@ public class UserModel {
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+    public String getJumlahInputan() {
+        return jumlahInputan;
+    }
+
+    public void setJumlahInputan(String jumlahInputan) {
+        this.jumlahInputan = jumlahInputan;
     }
 }
